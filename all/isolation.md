@@ -1,6 +1,8 @@
 
 # Isolation Level  
 [Ref](https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/)  
+[참고2](https://jupiny.com/2018/11/30/mysql-transaction-isolation-levels/#readcommitted)  
+[참고 3](https://effectivesquid.tistory.com/entry/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-Isolation-Level)  
 
 * 트랜젝션에서의 Isolation level : **격리수준**  
 * 격리수준이란 기본적으로 병렬 처리를 지원하는 DBMS에서, 동시에 여러 트랜젝션이 수행될 때  
@@ -29,10 +31,21 @@
 * 다른 트랜젝션의 **변경여부와 무관**하게, **일관된 데이터**를 볼 수 있는 수준의 고립도.  
 * 하지만 **Phantom read**가 발생 가능.  
 
+#### 1.3.1 Repeatable Read의 동작  
+1. 트랜잭션 시작 후 발생하는 **첫 번째 SELECT문의 수행 시점을 기준**으로,  
+2. 해당 시점의 **DB snapshot**을 읽어들여, 이를 대상으로 쿼리를 수행한다.  
+
+* 반면, Read committed의 경우 SELECT 쿼리 수행마다 DB의 snapshot을 읽어온다.  
+
+
+
+
 
 ### 1.4. Serializable  
 * 가장 엄격한 고립도를 보장한다.  
-* 
+* 하나의 트랙젝션 게시 후 SELECT 수행 시 레코드에 대해서 shared lock을 건다.  
+* 이를 통해, 다른 트랙젝션의 영향을 받지 않을 수 있고, 다른 트랜젝션이 수정 연산을 수행하면 대기시킨다.  
+
 
 
 
