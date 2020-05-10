@@ -25,6 +25,10 @@
 
 
 ## SQL statements  
+#### [1. SQL 실행 순서](/all/sql-pr.md) : 주어진 SQL 문은 어떤 순서대로 실행되는가?  
+#### [2. SQL 내부 동작 과정](/all/sql-wor.md) : paser -> optimizer -> row-source generator -> sql engine.  
+
+
 
 [1. select](/sql/select.md)  
   This is about  
