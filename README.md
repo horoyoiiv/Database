@@ -31,6 +31,9 @@
 #### [1. Query Off](/all/query-off.md) : Read-Only Slave노드를 배치한다.  
 * Master에서만 CUD 수행  
 * **backlog**를 사용하여 push 혹은 poll 방식으로 동기화.  
+#### [2. CDC 동기화 기법](https://specialscene.tistory.com/34) : Change Data Capture 기법   
+* **Change Data Capture** : 데이터 변경 내역을 식별하여, 동기화시키는 기법  
+* CDC 기법 중 **백 로그**를 통한 동기화 방법이 있다.  
 
 
 ## SQL statements  
