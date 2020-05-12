@@ -44,6 +44,10 @@
 ## Normalization  
 #### [1. 정규화](/all/norm.md) : 테이블에서 데이터 redundancy를 제거하는 방향으로 재설계하는 것.  
 
+## Sharding  
+#### [1. Sharding](/all/sharding.md) 
+###### 1. 테이블을 레코드 단위로 수평 분할하여, 여러 샤드에 저장하는 기술.  
+###### 2. 샤드키에 대한 hash function을 적용하여, hash value를 shard 수로 모듈러.  
 
 ## SQL statements  
 #### [1. SQL 실행 순서](/all/sql-pr.md) : 주어진 SQL 문은 어떤 순서대로 실행되는가?  
