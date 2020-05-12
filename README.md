@@ -8,6 +8,11 @@
 * 4. 그렇기에 where절이나 on절에 자주 사용되지만, 변화는 많이 발생안하는 필드에 적용.  
 * 5. 하지만 실제로 적용 후 성능 측정을 해보고, 향상된 성능이 trade-off만큼의 가치가 있었는지 판단.  
 
+### [2. Integrity](/all/integrity.md)  
+* 무결성 : DBA에 의해 설정된, 데이터베이스에서 지켜야하는 조건들.  
+* Domain Integrity, PrimaryKey Integrity, ForeignKey Integrity 등이 있다.  
+##### ACID의 Consistency는 Trx 전/후에도 이러한 Integrity가 지켜지는 일관된 상태를 유지해야 한다는 속성.  
+
 
 ## Transaction  
 * 데이터베이스에서 수행되는 작업의 단위.  
@@ -31,9 +36,13 @@
 #### [1. Query Off](/all/query-off.md) : Read-Only Slave노드를 배치한다.  
 * Master에서만 CUD 수행  
 * **backlog**를 사용하여 push 혹은 poll 방식으로 동기화.  
+
 #### [2. CDC 동기화 기법](https://specialscene.tistory.com/34) : Change Data Capture 기법   
 * **Change Data Capture** : 데이터 변경 내역을 식별하여, 동기화시키는 기법  
 * CDC 기법 중 **백 로그**를 통한 동기화 방법이 있다.  
+
+## Normalization  
+#### [1. 정규화](/all/norm.md) : 테이블에서 데이터 redundancy를 제거하는 방향으로 재설계하는 것.  
 
 
 ## SQL statements  
