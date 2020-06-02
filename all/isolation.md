@@ -9,6 +9,7 @@
 서로가 서로에 대한 얼마나, 어느수준 정보를 참조할 수 있는지에 대한 **고립도**를 설정하는 것.  
 
 * 고립도가 높을수록, 데이터의 **Consistency**는 증가하지만 **Trade-off**로서 **Concurrency**가 저하된다.  
+### [MySQL innoDB의 default는 repeatable read](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html)  
 
 ### 1. 고립도  
 1. read uncommitted  
