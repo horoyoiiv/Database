@@ -3,6 +3,7 @@
 [Ref](https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/)  
 [참고2](https://jupiny.com/2018/11/30/mysql-transaction-isolation-levels/#readcommitted)  
 [참고 3](https://effectivesquid.tistory.com/entry/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-Isolation-Level)  
+## [여기 참고!](https://mangkyu.tistory.com/30)  
 
 * 트랜젝션에서의 Isolation level : **격리수준**  
 * 격리수준이란 기본적으로 병렬 처리를 지원하는 DBMS에서, 동시에 여러 트랜젝션이 수행될 때  
@@ -44,9 +45,8 @@
 
 ### 1.4. Serializable  
 * 가장 엄격한 고립도를 보장한다.  
-* 하나의 트랙젝션 게시 후 SELECT 수행 시 레코드에 대해서 shared lock을 건다.  
+* 하나의 트랙젝션 게시 후 **SELECT 수행 시 테이블에 대해서 shared lock**을 건다.  
 * 이를 통해, 다른 트랙젝션의 영향을 받지 않을 수 있고, 다른 트랜젝션이 수정 연산을 수행하면 대기시킨다.  
-
 
 
 
