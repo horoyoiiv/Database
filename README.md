@@ -54,6 +54,9 @@
 #### [2. SQL 내부 동작 과정](/all/sql-wor.md) : paser -> optimizer -> row-source generator -> sql engine.  
 
 
+## NoSQL  
+* 왜 RDBMS가 `분산 시스템`에 적합하지 않는가...  
+
 
 [1. select](/sql/select.md)  
   This is about  
