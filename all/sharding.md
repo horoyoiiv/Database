@@ -6,6 +6,13 @@
 
 * **Vertical Partitioning** : 테이블에서 **특정 필드들에 대한 연산이 몰리는 경우** 그 부분을 따로 분리하여, **거기에 레플리케이션을 적용**.  
 
+## 샤딩의 이점?  
+#### [샤딩의 이점](https://www.digitalocean.com/community/tutorials/understanding-database-sharding)  
+* 1. **모로리틱**한 Database와 달리, **Shared된 DB**에서 나눠진 양의 record만 full scan하면 되기에, 더 빠르다.  
+ Another reason why some might choose a sharded database architecture is to speed up query response times. When you submit a query on a database that hasn’t been sharded, it may have to search every row in the table you’re querying before it can find the result set you’re looking for. For an application with a large, monolithic database, queries can become prohibitively slow. By sharding one table into multiple, though, queries have to go over fewer rows and their result sets are returned much more quickly.  
+ 
+
+
 
 * 하나의 테이블을 레코드의 묶음으로, **수평 분할하여 여러 노드에 분산 저장**하는 기법.  
 ![image](https://user-images.githubusercontent.com/62331555/81693043-47480c80-949a-11ea-9eb9-4644b8d3ed6c.png)  
